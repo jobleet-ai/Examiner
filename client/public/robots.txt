@@ -1,0 +1,30 @@
+# General rules for all search engines
+User-agent: *
+
+# Allow indexing of public content
+Allow: /
+Allow: /jobs/
+Allow: /skills-prep/
+Allow: /terms
+Allow: /privacy
+Allow: /assets/
+
+# Block Private Recruiter & Jobseeker areas
+Disallow: /login
+Disallow: /profile/
+Disallow: /my-applications
+Disallow: /recruiter/
+Disallow: /recruiters/me
+Disallow: /admin/
+
+# Block all API endpoints (Safest for AI platforms)
+Disallow: /api/v2/
+
+# Block specific sensitive query parameters
+Disallow: /*?token=
+Disallow: /*?session=
+Disallow: /*?code=
+
+# Host and Sitemap
+Host: https://jobleet.com
+Sitemap: https://jobleet.com/sitemap.xml
